@@ -1,0 +1,23 @@
+[wg-table] {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+[wg-cell] {
+	display: table-cell;
+	border: 1px solid #000;
+	padding: 1em;
+}
+
+[wg-cell ~= "1"],
+[wg-cell ~= "1/1"],
+[wg-cell ~= "5/5"],
+[wg-cell ~= "24/24"] { width: 100%; }
+
+// 5ths-based units:
+[wg-cell ~= "1/5"] { width: 1/5 * 100%; }
+[wg-cell ~= "2/5"] { width: 2/5 * 100%; }
+[wg-cell ~= "3/5"] { width: 3/5 * 100%; }
+[wg-cell ~= "4/5"] { width: 4/5 * 100%; }

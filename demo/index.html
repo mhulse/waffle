@@ -2,20 +2,72 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width">
 <title>blah</title>
 <link rel="stylesheet" href="../build/files/styles/css/grids.css">
+<link rel="stylesheet" href="../build/files/styles/css/grids-responsive.css">
+<style>
+body { margin: 0; padding: 3em; }
+[demo] {
+	background: rgba(147, 128, 108, .1);
+	padding: 1em;
+}
+body > [demo] { padding: 0; }
+</style>
 </head>
-<body wg-debug>
+<body>
 	
-	<div wg-row="column reverse">
-		<p wg-col="1/2">1</p>
-		<p wg-col="1/2">2</p>
+	<div wg-table>
+		<div wg-cell="1/5">1</div>
+		<div wg-cell="1/5">2</div>
+		<div wg-cell="1/5">3</div>
+		<div wg-cell="1/5">4</div>
+		<div wg-cell="1/5">5</div>
 	</div>
 	
-	<div wg-row>
-		<p wg-col="1/2">1</p>
-		<p wg-col="1/2">2</p>
+	<div demo>
+		
+		<div wg-row>
+			<div wg-col="1/5"><div demo>1</div></div>
+			<div wg-col="4/5">
+				<div demo>
+					<div wg-row>
+						<div wg-col="2/5"><div demo>1</div></div>
+						<div wg-col="3/5"><div demo>2</div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div wg-row>
+			<div wg-col="2/5"><div demo>1</div></div>
+			<div wg-col="3/5"><div demo>2</div></div>
+		</div>
+		
+		<div wg-row>
+			<div><div demo>1</div></div>
+			<div><div demo>2</div></div>
+			<div><div demo>3</div></div>
+			<div><div demo>4</div></div>
+			<div><div demo>5</div></div>
+		</div>
+		
+		<div wg-row>
+			<div wg-col="5/5"><div demo>1</div></div>
+		</div>
+		
+		<div wg-row>
+			<div wg-col="1/5"><div demo>1</div></div>
+			<div wg-col="4/5">
+				<div demo>
+					<div wg-row>
+						<div wg-col-sm="3/5" wg-col-lg="2/5" wg-col-xl="3/5"><div demo>1</div></div>
+						<div wg-col-sm="2/5" wg-col-lg="3/5" wg-col-xl="2/5"><div demo>2</div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</div>
 	
 </body>
