@@ -1,0 +1,14 @@
+/* Flexbox container
+------------------------------------------------------------------------------ */
+
+[wg-row] {
+	display: flex; // Immediate children will automatically become flex items.
+	flex: initial; // initial | auto | none | <positive-number>
+	flex-direction: row;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+[wg-row ~= "reverse"] { flex-direction: row-reverse; }
+
+[wg-row ~= "column"] { flex-direction: column; }
+[wg-row ~= "column"][wg-row ~= "reverse"] { flex-direction: column-reverse; }
