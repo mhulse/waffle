@@ -1,17 +1,1 @@
-/* Flexbox container
------------------------------------------------------------------------------- */
 
-[wg-row] {
-	display: flex; // Immediate children will automatically become flex items.
-	flex-direction: row;
-	flex-wrap: wrap;
-	box-sizing: border-box;
-	align-content: flex-start;
-	align-items: stretch;
-}
-
-[wg-row] > * {
-	flex: auto;
-	max-width: 100%;
-	box-sizing: border-box;
-}
