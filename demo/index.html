@@ -6,45 +6,21 @@
 <title>blah</title>
 <link rel="stylesheet" href="../build/files/styles/css/grids.css">
 <link rel="stylesheet" href="../build/files/styles/css/grids-responsive.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 <style>
-body { margin: 0; padding: 3em; }
-[wg-row] { margin-bottom: 1em; }
-[wg-col] { background: #eee; }
+html, body { background: #000; }
+[wg], [wg] > * { border: 1px solid #000; }
 </style>
 </head>
 <body>
 	
-	<div wg-row>
-		<div wg-col="1/5">1/5</div>
-		<div wg-col="4/5">4/5</div>
-	</div>
-	
-	<div wg-row>
-		<div wg-col="2/5">2/5</div>
-		<div wg-col="3/5">3/5</div>
-	</div>
-	
-	<div wg-row>
-		<div wg-col="3/5">3/5</div>
-		<div wg-col="2/5">2/5</div>
-	</div>
-	
-	<div wg-row>
-		<div wg-col="4/5">4/5</div>
-		<div wg-col="1/5">1/5</div>
-	</div>
-	
-	<div wg-row>
-		<div wg-col="1">1</div>
-	</div>
-	
-	<div wg-row>
-		<div wg-col="1/1">1/1</div>
-	</div>
-	
-	<div wg-row>
-		<div wg-col="5/5">5/5</div>
-	</div>
+	<section wg>
+		<header>Header</header>
+		<main>
+			<div class="scroll"><p>Pellentesque ultricies luctus leo, et venenatis est sodales id. Phasellus in mattis nisi. Sed luctus nisi vel rutrum varius. Pellentesque tempor auctor ultrices. Curabitur bibendum neque lectus, pellentesque vestibulum dui pretium quis. Duis sagittis, nisi lobortis accumsan pharetra, quam massa varius lectus, vel porta ipsum ante at dolor. Fusce bibendum condimentum velit, eu vulputate velit accumsan vitae. In eu lorem ut purus tincidunt dictum. Nulla vitae lectus et dui pulvinar vestibulum id vitae augue. Curabitur aliquam, ante vehicula dapibus mattis, magna est suscipit libero, sit amet ullamcorper erat lectus ut massa. Cras quis vehicula justo, id semper metus. Mauris volutpat arcu ex, eget aliquam lorem lacinia eu. Vivamus sit amet quam vel orci elementum sollicitudin in nec diam. Sed pellentesque tincidunt arcu, volutpat condimentum dolor tempor eu.</p></div>
+		</main>
+		<footer>Footer</footer>
+	</section>
 	
 </body>
 </html>
