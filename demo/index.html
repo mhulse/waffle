@@ -3,24 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>blah</title>
+<title></title>
 <link rel="stylesheet" href="../build/files/styles/css/grids.css">
 <link rel="stylesheet" href="../build/files/styles/css/grids-responsive.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
-<style>
-html, body { background: #000; }
-[wg], [wg] > * { border: 1px solid #000; }
-</style>
 </head>
-<body>
+<body debug>
 	
-	<section wg>
-		<header>Header</header>
-		<main>
-			<div class="scroll"><p>Pellentesque ultricies luctus leo, et venenatis est sodales id. Phasellus in mattis nisi. Sed luctus nisi vel rutrum varius. Pellentesque tempor auctor ultrices. Curabitur bibendum neque lectus, pellentesque vestibulum dui pretium quis. Duis sagittis, nisi lobortis accumsan pharetra, quam massa varius lectus, vel porta ipsum ante at dolor. Fusce bibendum condimentum velit, eu vulputate velit accumsan vitae. In eu lorem ut purus tincidunt dictum. Nulla vitae lectus et dui pulvinar vestibulum id vitae augue. Curabitur aliquam, ante vehicula dapibus mattis, magna est suscipit libero, sit amet ullamcorper erat lectus ut massa. Cras quis vehicula justo, id semper metus. Mauris volutpat arcu ex, eget aliquam lorem lacinia eu. Vivamus sit amet quam vel orci elementum sollicitudin in nec diam. Sed pellentesque tincidunt arcu, volutpat condimentum dolor tempor eu.</p></div>
-		</main>
-		<footer>Footer</footer>
-	</section>
+	<div
+		d="flex"
+		fd="column"
+		w="wrap"
+	>
+		
+		<div order="3">
+			<p>Paragraph 1</p>
+		</div>
+		
+		<div>
+			<p>Paragraph 2</p>
+		</div>
+		
+		<div>
+			<p>Paragraph 3</p>
+		</div>
+		
+	</div>
+	
+	<script>
+		
+		function helper(attr) {
+			
+			var i;
+			var l;
+			var $els = document.querySelectorAll('[' + attr + ']');
+			
+			for (i = 0, l = $els.length; i < l; ++i) {
+				
+				$els[i].style.order = $els[i].getAttribute(attr);
+				
+			}
+			
+		}
+		
+		document.addEventListener("DOMContentLoaded", function($event) {
+			
+			helper('flex-flow');
+			helper('order');
+			
+		});
+		
+	</script>
 	
 </body>
 </html>
