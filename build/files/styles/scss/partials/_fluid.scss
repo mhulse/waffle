@@ -27,127 +27,132 @@ i=""
 c=""
 */
 
-[display="flex"],
-[d="flex"]
+[display=flex],
+[d=flex]
 { display: flex; }
 
-[display="inline-flex"], [display="inline"]
-[d="inline-flex"], [d="inline"]
+[display=inline-flex], [display=inline]
+[d=inline-flex], [d=inline]
 { display: inline-flex; }
 
-[flex-direction="row"],
-[direction="row"],
-[d="row"]
-{ flex-direction: row; } // Default.
+// Default:
+[flex-direction=row],
+[direction=row],
+[d=row]
+{ flex-direction: row; }
 
-[flex-direction="row-reverse"], [direction="rowrev"],
-[direction="row-reverse"], [direction="rowrev"],
-[d="row-reverse"], [d="row-rev"]
+[flex-direction=row-reverse], [direction=rowrev],
+[direction=row-reverse], [direction=rowrev],
+[d=row-reverse], [d=row-rev]
 { flex-direction: row-reverse; }
 
-[flex-direction="column"], [flex-direction="col"],
-[direction="column"], [direction="col"],
-[d="column"], [d="col"]
+[flex-direction=column], [flex-direction=col],
+[direction=column], [direction=col],
+[d=column], [d=col]
 { flex-direction: column; }
 
-[flex-direction="column-reverse"], [flex-direction="colrev"]
-[direction="column-reverse"], [direction="colrev"]
-[d="column-reverse"], [d="colrev"]
+[flex-direction=column-reverse], [flex-direction=colrev]
+[direction=column-reverse], [direction=colrev]
+[d=column-reverse], [d=colrev]
 { flex-direction: column-reverse; }
 
-[flex-wrap="nowrap"], [flex-wrap="no"],
-[wrap="nowrap"], [wrap="no"],
-[w="nowrap"], [w="no"]
-{ flex-wrap: nowrap; } // Default.
+// Default:
+[flex-wrap=nowrap], [flex-wrap=no],
+[wrap=nowrap], [wrap=no],
+[w=nowrap], [w=no]
+{ flex-wrap: nowrap; }
 
-[flex-wrap="wrap"],
-[wrap="wrap"],
-[w="wrap"]
+[flex-wrap=wrap],
+[wrap=wrap],
+[w=wrap]
 { flex-wrap: wrap; }
 
-[flex-wrap="wrap-reverse"], [flex-wrap="reverse"], [flex-wrap="rev"]
-[wrap="wrap-reverse"], [wrap="reverse"], [wrap="rev"],
-[w="wrap-reverse"], [w="reverse"], [w="rev"]
+[flex-wrap=wrap-reverse], [flex-wrap=reverse], [flex-wrap=rev]
+[wrap=wrap-reverse], [wrap=reverse], [wrap=rev],
+[w=wrap-reverse], [w=reverse], [w=rev]
 { flex-wrap: wrap-reverse; }
 
-[justify-content="flex-start"],
-[justify="flex-start"],
-[j="flex-start"]
-{ justify-content: flex-start; } // Default.
+// Default:
+[justify-content=flex-start],
+[justify=flex-start],
+[j=flex-start]
+{ justify-content: flex-start; }
 
-[justify-content="flex-end"], [justify-content="end"],
-[justify="flex-end"], [justify="end"],
-[j="flex-end"], [j="end"]
+[justify-content=flex-end], [justify-content=end],
+[justify=flex-end], [justify=end],
+[j=flex-end], [j=end]
 { justify-content: flex-end; }
 
-[justify-content="center"],
-[justify="center"],
-[j="center"]
+[justify-content=center],
+[justify=center],
+[j=center]
 { justify-content: center; }
 
-[justify-content="space-between"], [justify-content="between"],
-[justify="space-between"], [justify="between"],
-[j="space-between"], [j="between"]
+[justify-content=space-between], [justify-content=between],
+[justify=space-between], [justify=between],
+[j=space-between], [j=between]
 { justify-content: space-between; }
 
-[justify-content="space-around"], [justify-content="around"],
-[justify="space-around"], [justify="around"],
-[j="space-around"], [j="space-around"]
+[justify-content=space-around], [justify-content=around],
+[justify=space-around], [justify=around],
+[j=space-around], [j=space-around]
 { justify-content: space-around; }
 
-[align-items="stretch"],
-[items="stretch"],
-[i="stretch"]
-{ align-items: stretch; } // Default.
+// Default:
+[align-items=stretch],
+[items=stretch],
+[i=stretch]
+{ align-items: stretch; }
 
-[align-items="flex-start"], [align-items="start"],
-[items="flex-start"], [items="start"],
-[i="flex-start"], [i="start"]
+[align-items=flex-start], [align-items=start],
+[items=flex-start], [items=start],
+[i=flex-start], [i=start]
 { align-items: flex-start; }
 
-[align-items="flex-end"], [align-items="end"],
-[items="flex-end"], [items="end"],
-[i="flex-end"], [i="end"]
+[align-items=flex-end], [align-items=end],
+[items=flex-end], [items=end],
+[i=flex-end], [i=end]
 { align-items: flex-end; }
 
-[align-items="center"],
-[items="center"],
-[i="center"]
+[align-items=center],
+[items=center],
+[i=center]
 { align-items: center; }
 
-[align-items="baseline"], [align-items="base"],
-[items="baseline"], [items="base"],
-[i="baseline"], [i="base"]
+[align-items=baseline], [align-items=base],
+[items=baseline], [items=base],
+[i=baseline], [i=base]
 { align-items: baseline; }
 
-[align-content="stretch"],
-[content="stretch"],
-[c="stretch"]
-{ align-content: stretch; } // Default.
+// Default:
+[align-content=stretch],
+[content=stretch],
+[c=stretch]
+{ align-content: stretch; }
 
-[align-content="flex-start"], [align-content="start"],
-[content="flex-start"], [content="start"],
-[c="flex-start"], [c="start"]
+[align-content=flex-start], [align-content=start],
+[content=flex-start], [content=start],
+[c=flex-start], [c=start]
 { align-content: flex-start; }
 
-[align-content="flex-end"], [align-content="end"],
-[content="flex-end"], [content="end"],
-[c="flex-end"], [c="end"]
+[align-content=flex-end], [align-content=end],
+[content=flex-end], [content=end],
+[c=flex-end], [c=end]
 { align-content: flex-end; }
 
-[align-content="center"],
-[content="center"],
-[c="center"]
+[align-content=center],
+[content=center],
+[c=center]
 { align-content: center; }
 
-[align-content="space-between"], [align-content="between"],
-[content="space-between"], [content="between"],
-[c="space-between"], [c="between"]
+[align-content=space-between], [align-content=between],
+[content=space-between], [content=between],
+[c=space-between], [c=between]
 { align-content: space-between; }
 
-[align-content="space-around"], [align-content="around"],
-[content="space-around"], [content="around"],
-[c="space-around"], [c="around"]
+[align-content=space-around], [align-content=around],
+[content=space-around], [content=around],
+[c=space-around], [c=around]
 { align-content: space-around; }
 
 /* Flexbox items
