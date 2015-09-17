@@ -1,163 +1,201 @@
 /* Flexbox container
 ------------------------------------------------------------------------ */
 
-/*
-display=""
-flex-direction=""
-flex-wrap=""
-flex-flow=""
-justify-content=""
-align-items=""
-align-content=""
+[wg-flex] {
+	
+	//----------------------------------
+	// display, d
+	//----------------------------------
+	
+	// flex, f
+	&[display=flex], &[display=f],
+	&[d=flex],       &[d=f]
+	{ display: flex; }
 
-display=""
-direction=""
-wrap=""
-flow=""
-justify=""
-items=""
-content=""
+	// inline-felx, inline, if, i
+	&[display=inline-flex], &[display=inline], &[display=if], &[display=i],
+	&[d=inline-flex],       &[d=inline],       &[d=if],       &[d=i]
+	{ display: inline-flex; }
 
-d=""
-fd=""
-w=""
-f=""
-j=""
-i=""
-c=""
-*/
+	//----------------------------------
+	// flex-direction, fd, direction, d
+	//----------------------------------
 
-[display=flex],
-[d=flex]
-{ display: flex; }
+	// row, r
+	&[flex-direction=row], &[flex-direction=r]
+	&[direction=row],      &[direction=r],
+	&[fd=row],             &[fd=r],
+	&[d=row],              &[d=r]
+	{ flex-direction: row; } // Default.
 
-[display=inline-flex], [display=inline]
-[d=inline-flex], [d=inline]
-{ display: inline-flex; }
+	// row-reverse, rr
+	&[flex-direction=row-reverse], &[direction=rr],
+	&[direction=row-reverse],      &[direction=rr],
+	&[fd=row-reverse],             &[fd=rr]
+	&[d=row-reverse],              &[d=rr]
+	{ flex-direction: row-reverse; }
 
-// Default:
-[flex-direction=row],
-[direction=row],
-[d=row]
-{ flex-direction: row; }
+	// column, col, c
+	&[flex-direction=column], &[flex-direction=col], &[flex-direction=c],
+	&[direction=column],      &[direction=col],      &[direction=c],
+	&[fd=column],             &[fd=col],             &[fd=c],
+	&[d=column],              &[d=col],              &[d=c]
+	{ flex-direction: column; }
 
-[flex-direction=row-reverse], [direction=rowrev],
-[direction=row-reverse], [direction=rowrev],
-[d=row-reverse], [d=row-rev]
-{ flex-direction: row-reverse; }
+	// column-reverse, cr
+	&[flex-direction=column-reverse], &[flex-direction=cr],
+	&[direction=column-reverse],      &[direction=cr],
+	&[fd=column-reverse],             &[fd=cr],
+	&[d=column-reverse],              &[d=cr]
+	{ flex-direction: column-reverse; }
 
-[flex-direction=column], [flex-direction=col],
-[direction=column], [direction=col],
-[d=column], [d=col]
-{ flex-direction: column; }
+	//----------------------------------
+	// flex-wrap, wrap, w
+	//----------------------------------
 
-[flex-direction=column-reverse], [flex-direction=colrev]
-[direction=column-reverse], [direction=colrev]
-[d=column-reverse], [d=colrev]
-{ flex-direction: column-reverse; }
+	// nowrap, nw, no, n
+	&[flex-wrap=nowrap], &[flex-wrap=nw], &[flex-wrap=no], &[flex-wrap=n],
+	&[wrap=nowrap],      &[wrap=nw],      &[wrap=no],      &[wrap=n],
+	&[w=nowrap],         &[w=nw],         &[w=no],         &[w=n]
+	{ flex-wrap: nowrap; } // Default.
 
-// Default:
-[flex-wrap=nowrap], [flex-wrap=no],
-[wrap=nowrap], [wrap=no],
-[w=nowrap], [w=no]
-{ flex-wrap: nowrap; }
+	// wrap, w
+	&[flex-wrap=wrap], &[flex-wrap=w],
+	&[wrap=wrap],      &[wrap=w],
+	&[w=wrap],         &[w=w]
+	{ flex-wrap: wrap; }
 
-[flex-wrap=wrap],
-[wrap=wrap],
-[w=wrap]
-{ flex-wrap: wrap; }
+	// wrap-reverse, reverse, rev, r
+	&[flex-wrap=wrap-reverse], &[flex-wrap=reverse], &[flex-wrap=rev], &[flex-wrap=r]
+	&[wrap=wrap-reverse],      &[wrap=reverse],      &[wrap=rev],      &[wrap=r],
+	&[w=wrap-reverse],         &[w=reverse],         &[w=rev],         &[w=r]
+	{ flex-wrap: wrap-reverse; }
 
-[flex-wrap=wrap-reverse], [flex-wrap=reverse], [flex-wrap=rev]
-[wrap=wrap-reverse], [wrap=reverse], [wrap=rev],
-[w=wrap-reverse], [w=reverse], [w=rev]
-{ flex-wrap: wrap-reverse; }
+	//----------------------------------
+	// justify-content, justify, j
+	//----------------------------------
 
-// Default:
-[justify-content=flex-start],
-[justify=flex-start],
-[j=flex-start]
-{ justify-content: flex-start; }
+	// flex-start, start, fs, s
+	&[justify-content=flex-start], &[justify-content=start], &[justify-content=fs], &[justify-content=s],
+	&[justify=flex-start],         &[justify=start],         &[justify=fs],         &[justify=s],
+	&[j=flex-start],               &[j=start],               &[j=fs],               &[j=s]
+	{ justify-content: flex-start; } // Default.
 
-[justify-content=flex-end], [justify-content=end],
-[justify=flex-end], [justify=end],
-[j=flex-end], [j=end]
-{ justify-content: flex-end; }
+	// flex-end, end, fe, e
+	&[justify-content=flex-end], &[justify-content=end], &[justify-content=fe], &[justify-content=e],
+	&[justify=flex-end],         &[justify=end],         &[justify=fe],         &[justify=e],
+	&[j=flex-end],               &[j=end],               &[j=fe],               &[j=e]
+	{ justify-content: flex-end; }
 
-[justify-content=center],
-[justify=center],
-[j=center]
-{ justify-content: center; }
+	// center, c
+	&[justify-content=center], &[justify-content=c],
+	&[justify=center],         &[justify=c],
+	&[j=center],               &[j=c]
+	{ justify-content: center; }
 
-[justify-content=space-between], [justify-content=between],
-[justify=space-between], [justify=between],
-[j=space-between], [j=between]
-{ justify-content: space-between; }
-
-[justify-content=space-around], [justify-content=around],
-[justify=space-around], [justify=around],
-[j=space-around], [j=space-around]
-{ justify-content: space-around; }
-
-// Default:
-[align-items=stretch],
-[items=stretch],
-[i=stretch]
-{ align-items: stretch; }
-
-[align-items=flex-start], [align-items=start],
-[items=flex-start], [items=start],
-[i=flex-start], [i=start]
-{ align-items: flex-start; }
-
-[align-items=flex-end], [align-items=end],
-[items=flex-end], [items=end],
-[i=flex-end], [i=end]
-{ align-items: flex-end; }
-
-[align-items=center],
-[items=center],
-[i=center]
-{ align-items: center; }
-
-[align-items=baseline], [align-items=base],
-[items=baseline], [items=base],
-[i=baseline], [i=base]
-{ align-items: baseline; }
-
-// Default:
-[align-content=stretch],
-[content=stretch],
-[c=stretch]
-{ align-content: stretch; }
-
-[align-content=flex-start], [align-content=start],
-[content=flex-start], [content=start],
-[c=flex-start], [c=start]
-{ align-content: flex-start; }
-
-[align-content=flex-end], [align-content=end],
-[content=flex-end], [content=end],
-[c=flex-end], [c=end]
-{ align-content: flex-end; }
-
-[align-content=center],
-[content=center],
-[c=center]
-{ align-content: center; }
-
-[align-content=space-between], [align-content=between],
-[content=space-between], [content=between],
-[c=space-between], [c=between]
-{ align-content: space-between; }
-
-[align-content=space-around], [align-content=around],
-[content=space-around], [content=around],
-[c=space-around], [c=around]
-{ align-content: space-around; }
+	// space-between, between, sb, b
+	&[justify-content=space-between], &[justify-content=between], &[justify-content=sb], &[justify-content=b],
+	&[justify=space-between],         &[justify=between],         &[justify=sb],         &[justify=b],
+	&[j=space-between],               &[j=between],               &[j=sb],               &[j=b]
+	{ justify-content: space-between; }
+	
+	// space-around, around, sa, a
+	&[justify-content=space-around], &[justify-content=around], &[justify-content=sa], &[justify-content=a],
+	&[justify=space-around],         &[justify=around],         &[justify=sa],         &[justify=a],
+	&[j=space-around],               &[j=around],               &[j=sa],               &[j=a]
+	{ justify-content: space-around; }
+	
+	//----------------------------------
+	// align-items, items, ai, i
+	//----------------------------------
+	
+	// stretch, s
+	&[align-items=stretch], &[align-items=s],
+	&[items=stretch],       &[items=s],
+	&[ai=stretch],          &[ai=s],
+	&[i=stretch],           &[i=s]
+	{ align-items: stretch; } // Default.
+	
+	// flex-start, start, fs
+	&[align-items=flex-start], &[align-items=start], &[align-items=fs],
+	&[items=flex-start],       &[items=start],       &[items=fs],
+	&[ai=flex-start],          &[ai=start],          &[ai=fs],
+	&[i=flex-start],           &[i=start],           &[i=fs]
+	{ align-items: flex-start; }
+	
+	// flex-end, end, fs
+	&[align-items=flex-end], &[align-items=end], &[align-items=fe],
+	&[items=flex-end],       &[items=end],       &[items=fe],
+	&[ai=flex-end],          &[ai=end],          &[ai=fe],
+	&[i=flex-end],           &[i=end],           &[i=fe]
+	{ align-items: flex-end; }
+	
+	// center, c
+	&[align-items=center], &[align-items=c],
+	&[items=center],       &[items=c],
+	&[ai=center],          &[ai=c],
+	&[i=center],           &[i=c]
+	{ align-items: center; }
+	
+	// baseline, base, bl, b
+	&[align-items=baseline], &[align-items=base], &[align-items=bl], &[align-items=b],
+	&[items=baseline],       &[items=base],       &[items=bl],       &[items=b],
+	&[ai=baseline],          &[ai=base],          &[ai=bl],          &[ai=b],
+	&[i=baseline],           &[i=base],           &[i=bl],           &[i=b]
+	{ align-items: baseline; }
+	
+	//----------------------------------
+	// align-content, content, ac, c
+	//----------------------------------
+	
+	// stretch, s
+	&[align-content=stretch], &[align-content=s],
+	&[content=stretch],       &[content=s],
+	&[ac=stretch],            &[ac=s],
+	&[c=stretch],             &[c=s]
+	{ align-content: stretch; } // Default.
+	
+	// flex-start, start, st
+	&[align-content=flex-start], &[align-content=start], &[align-content=st],
+	&[content=flex-start],       &[content=start],       &[content=st],
+	&[ac=flex-start],            &[ac=start],            &[ac=st]
+	&[c=flex-start],             &[c=start],             &[c=st]
+	{ align-content: flex-start; }
+	
+	// flex-end, end, fe, e
+	&[align-content=flex-end], &[align-content=end], &[align-content=fe], &[align-content=e],
+	&[content=flex-end],       &[content=end],       &[content=fe],       &[content=e],
+	&[ac=flex-end],            &[ac=end],            &[ac=fe],            &[ac=e],
+	&[c=flex-end],             &[c=end],             &[c=fe],             &[c=e]
+	{ align-content: flex-end; }
+	
+	// center, c
+	&[align-content=center], &[align-content=c],
+	&[content=center],       &[content=c],
+	&[ac=center],            &[ac=c],
+	&[c=center],             &[ac=c]
+	{ align-content: center; }
+	
+	// space-between, between, sb, b
+	&[align-content=space-between], &[align-content=between], &[align-content=sb], &[align-content=b],
+	&[content=space-between],       &[content=between],       &[content=sb],       &[content=b],
+	&[ac=space-between],            &[ac=between],            &[ac=sb],            &[ac=b],
+	&[c=space-between],             &[c=between],             &[c=sb],             &[c=b]
+	{ align-content: space-between; }
+	
+	// space-around, around, sa, a
+	&[align-content=space-around], &[align-content=around], &[align-content=sa], &[align-content=a],
+	&[content=space-around],       &[content=around],       &[content=sa],       &[content=a],
+	&[ac=space-around],            &[ac=around],            &[ac=sa],            &[ac=a],
+	&[c=space-around],             &[c=around],             &[c=sa],             &[c=a]
+	{ align-content: space-around; }
+	
+}
 
 /* Flexbox items
 ------------------------------------------------------------------------ */
 
+/*
 [wg-flex ~= auto] {
 	flex: 1 1 auto;
 	min-width: 0;
@@ -167,10 +205,12 @@ c=""
 [wg-flex ~= none]  { flex: none }
 [wg-flex ~= first] { order: -1 }
 [wg-flex ~= last]  { order: 99999 }
+*/
 
 /* Table
 ------------------------------------------------------------------------ */
 
+/*
 [wg-row] {
 	display: table;
 	width: 100%;
@@ -236,3 +276,4 @@ c=""
 [wg-col ~= "11/12"],
 [wg-col ~= "22/24"] { width: 11/12 * 100%; }
 [wg-col ~= "23/24"] { width: 23/24 * 100%; }
+*/
