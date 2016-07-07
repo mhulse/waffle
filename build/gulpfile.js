@@ -1,9 +1,16 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
-var bower = require('main-bower-files');
 var autoprefixer = require('gulp-autoprefixer');
 var coffee = require('gulp-coffee');
+var connect = require('gulp-connect');
+
+gulp.task('connect', function() {
+	connect.server({
+		root: '../demo',
+		livereload: true
+	});
+});
 
 gulp.task('sass', function() {
 	gulp.src('files/styles/scss/*.scss')
@@ -16,11 +23,7 @@ gulp.task('sass', function() {
 		.pipe(autoprefixer())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('files/styles/css'))
-});
-
-gulp.task('watch', function() {
-	gulp.watch('files/styles/scss/**/*.scss', [ 'sass', ]);
-	gulp.watch('files/scripts/coffee/**/*.coffee', [ 'coffee', ]);
+		.pipe(connect.reload());
 });
 
 gulp.task('coffee', function() {
@@ -31,15 +34,19 @@ gulp.task('coffee', function() {
 		}))
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('files/scripts/js'))
+		.pipe(connect.reload());
 });
 
-gulp.task('bower', function() {
-	
-	gulp.src(bower(), {
-		base: 'bower_components' // Required!
-	})
-		.pipe(gulp.dest('files/plugins'));
-	
+gulp.task('watch', function() {
+	gulp.watch('files/styles/scss/**/*.scss', [
+		'sass',
+	]);
+	gulp.watch('files/scripts/coffee/**/*.coffee', [
+		'coffee',
+	]);
 });
 
-gulp.task('default', [ 'watch', ]);
+gulp.task('default', [
+	'connect',
+	'watch',
+]);
