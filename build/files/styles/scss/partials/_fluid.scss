@@ -277,3 +277,16 @@
 [wg-col ~= "22/24"] { width: 11/12 * 100%; }
 [wg-col ~= "23/24"] { width: 23/24 * 100%; }
 */
+
+// http://codepen.io/townivan/post/ease-into-flexbox-part1
+// Remember, flexbox applies to containers and their direct children.
+// So use flexbox to make your navigation bar but not as your page grid.
+//
+// Shorthand notes.
+// ( … ) = default
+// [ … ] = optional
+
+.foo {
+	//    flex-grow (0)[ flex-shrink (1) flex-basis (auto)]
+	flex: 1              1               200px;
+}
